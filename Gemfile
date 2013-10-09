@@ -12,15 +12,16 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'sqlite3','1.3.8'
 
 group :development,:test do
-   gem 'rspec-rails','2.13.1'
-   gem 'guard-rspec','2.5.0'
-   # gem 'capybara-screenshot'
+  gem 'rspec-rails','2.13.1'
+  gem 'guard','1.8.3'
+  gem 'guard-rspec','2.5.0'
+  gem 'growl','1.0.3'
+  # gem 'capybara-screenshot'
 end
 
 group :test do
   gem 'selenium-webdriver','2.35.1'
   gem 'capybara','2.1.0'
-  gem 'growl','1.0.3'
   gem 'factory_girl_rails','4.2.1'
 end
 
