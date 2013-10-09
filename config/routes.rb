@@ -1,4 +1,11 @@
 Forums::Application.routes.draw do
+  root 'static#index'
+
+  match '/contact',to: 'static#contact', via: 'get'
+  match '/about',to: 'static#about',via: 'get'
+  match '/news',to: 'static#news',via: 'get'
+  match '/help',to: 'static#help',via: 'get'
+
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -41,7 +48,7 @@ Forums::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
