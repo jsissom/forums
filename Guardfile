@@ -2,6 +2,10 @@
 # More info at https://github.com/guard/guard#readme
 
 guard 'rspec',all_after_pass: false do
+  watch('spec/features/i18n_spec.rb')
+  watch('config/locales/en.yml') { 'spec/features/i18n_spec.rb' }
+  watch('config/locales/fr.yml') { 'spec/features/i18n_spec.rb' }
+
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }

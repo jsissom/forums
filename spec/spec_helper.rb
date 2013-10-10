@@ -43,3 +43,26 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
 end
+
+# Return error message if there is a difference in the keys or
+# empty string if no difference
+def compare_yaml_hash(cf1, cf2, context = [])
+  cf1.each do |key, value|
+    unless cf2.key?(key)
+      return "Missing key : #{key} in path #{context.join(".")}"
+      next
+    end
+
+    value2 = cf2[key]
+    if (value.class != value2.class)
+      return "Key value type mismatch : #{key} in path #{context.join(".")}"
+      next
+    end
+
+    if value.is_a?(Hash)
+      compare_yaml_hash(value, cf2[key], (context + [key]))
+      next
+    end
+  end
+  return ''
+end
