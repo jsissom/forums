@@ -1,12 +1,14 @@
 Forums::Application.routes.draw do
-  root 'static#index'
+  scope "(:locale)" do
+    root 'static#index'
 
-  match '/contact',to: 'static#contact', via: 'get'
-  match '/about',to: 'static#about',via: 'get'
-  match '/news',to: 'static#news',via: 'get'
-  match '/help',to: 'static#help',via: 'get'
+    match '/contact',to: 'static#contact', via: 'get'
+    match '/about',to: 'static#about',via: 'get'
+    match '/news',to: 'static#news',via: 'get'
+    match '/help',to: 'static#help',via: 'get'
 
-  resources :users
+    resources :users
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -19,30 +19,30 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  site_title: "Rails Forums"
+fr:
+  site_title: "Rails Forum"
   layouts:
     header:
-      home: "Home"
-      help: "Help"
-      sign_in: "Sign in"
+      home: "Maison"
+      help: "Aide"
+      sign_in: "Connexion"
     footer:
-      copyright: "Copyright"
-      about: "About"
+      copyright: "Droit d'auteur"
+      about: "Environ"
       contact: "Contact"
-      news: "News"
+      news: "Actualités"
   static:
     index:
-      welcome: "Welcome to Rails Forums"
-      h2: "This is the home page for the rails forums."
-      sign_up_now: "Sign up now!"
+      welcome: "Bienvenue sur Rails Forum"
+      h2: "Cette page est la page d'accueil pour les Rails Forums."
+      sign_up_now: "Inscrivez-vous dès maintenant!"
     help:
-      title: "Help"
+      title: "Aide"
     about:
-      title: "About Us"
-      text: "This is a sample rails application created by Jay Sissom."
+      title: "A propos de nous"
+      text: "C'est un échantillon rails application créée par Jay Sissom."
     contact:
       title: "Contact"
-      text: "Contact Information"
+      text: "Informations de contact"
     news:
-      title: "News"
+      title: "Actualités"
